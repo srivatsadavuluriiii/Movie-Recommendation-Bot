@@ -10,7 +10,7 @@ intents.guilds = True
 client = commands.Bot(command_prefix="!", intents=intents)
 
 movies_df = pd.read_csv("movies_metadata.csv")
-
+print(movies_df.head())
 @client.event
 async def on_ready():
     print(f"Logged in as {client.user}")
@@ -29,6 +29,7 @@ async def recommend(ctx, genre):
             response += f"• **{row['title']}** ({row['vote_average']} stars on IMDb) - {row['overview']}\n"
             response += f"   {row['poster_path']}\n\n"  
 
+ 
         await ctx.send(response)
 
     except (ValueError, KeyError) as e:
