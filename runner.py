@@ -35,4 +35,4 @@ async def recommend(ctx, genre):
     except (ValueError, KeyError) as e:
         await ctx.send(f"Error: Could not process recommendation. Please check the genre name and dataset format.")
 
-client.run("MTE4ODU0NDg2MjQwOTIwNzgzOA.Ggec2k.T9ZxqmfC0rCZjWkutNNtQt4qX0QRlha8qcdcVw")
+client.run("Your Bot Token")
